@@ -1,0 +1,10 @@
+from scipy.sparse import csr_matrix
+import numpy as np
+
+# Assuming `similarity` is your dense similarity matrix
+similarity_dense = np.array(...)  # Your dense similarity matrix
+similarity_sparse = csr_matrix(similarity_dense)
+
+# Save the sparse matrix
+import joblib
+joblib.dump(similarity_sparse, 'similarity_sparse.pkl')
